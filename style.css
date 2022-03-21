@@ -1,0 +1,342 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.hero1 {
+    background-image: url(../images/island.jpg);
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.hero2{
+    background-image: url(../images/main_eat.jpg);
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.hero3{
+    background-image: url(../images/main_play.jpg);
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.hero4{
+    background-image: url(../images/main_happening.jpg);
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.hero5{
+    background-image: url(../images/beaches.jpeg);
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.content1 {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+.header{
+    position:relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(128, 128, 128);
+    padding: 4px 25px;
+    transition: 0.3s;
+    min-height: 70px;
+}
+
+.logo a{
+    display: block;
+    color: orange;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+.navigation{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;  
+    transition: 0.3s;
+}
+.menu li {
+    list-style-type: none;
+}
+.menu li a{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    display: flex;
+    padding: 40px 25px;
+    transition: 0.3s;
+}
+.menu li a:hover{
+    background-color: orange;
+}
+.hamburger{
+    position:relative;
+    width:32px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    transition: 0.3s;
+    z-index: 2;
+    cursor: pointer;
+}
+.hamburger:before, .hamburger:after{
+    content:"";
+    position:absolute;
+    height: 3px;
+    right:0;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.hamburger:before{
+  top:-12px;
+  width: 32px;
+}
+.hamburger:after{
+    top:12px;
+  width: 32px;
+}
+.change-menu{
+    width: 32px;
+    position: absolute;
+    height: 100%;
+    z-index: 3;
+    opacity: 0;
+    cursor: pointer;
+}
+    
+.hamburger, .change-menu{
+       display:none
+}
+.navigation input:checked ~  .hamburger{
+    background-color: transparent;
+}
+.navigation input:checked ~  .hamburger:before{ 
+    top:0;
+    width: 32px;
+    transform: rotate(-45deg);
+}
+.navigation input:checked ~  .hamburger:after{
+    top:0;
+    width: 32px;
+    transform: rotate(45deg);
+}
+.navigation input:checked ~  .menu{
+    right:0;}
+
+
+
+
+
+.btn{
+    padding:15px ;
+    margin:10px 100px;
+    font-size:medium;
+    background-color: orange;
+    border: none;
+    border-radius: 20px;
+
+
+}
+
+.content2{
+    max-width: 80%;
+    width: 800px;
+    margin: 0 auto;
+    padding :20px 0;
+   
+}
+.content2 h2{
+    color: orange;
+    padding: 15px 0;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+ 
+.content2 h1{
+    text-align: center;
+    padding:18px 0;
+    color: blue;
+
+}
+
+.content2 img , .beaches img{
+    max-width: 85%;
+    width: 650px;
+    margin: 0 auto;
+    display:block;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+.grid-container {
+    margin: 0 auto;
+    max-width:85%;
+    width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;       
+    grid-gap: 1rem;
+    justify-content: center;
+    padding: 25px 5px;
+
+ 
+}
+.grid-item h2{
+    padding: 12px ;
+    color: brown;
+}
+
+.grid-item img{
+   max-width: 100%;
+   display: block;
+    width:320px;
+    height: 250px;
+    margin:0 auto;
+    border-radius: 5px;
+}
+.grid-item p{
+    margin-top: 10px;
+}
+
+
+
+.blogs, .beaches{
+    margin: 0 auto;
+    max-width:85%;
+    width: 800px;
+}
+.beaches h2{
+    text-align: center;
+    padding:15px 0;
+    color: orange;   
+}
+
+.beaches p{
+    margin-bottom: 20px;
+}
+.blogs h3{
+    padding:10px 0;
+}
+.blogs h3 a {
+    text-decoration: none;
+    color: rgb(81, 91, 235);
+}
+
+.blog-item{
+    overflow: hidden;
+    padding:20px 0;
+   
+}
+.blogs h1{
+    text-align: center;
+}
+
+
+.blog-item img{
+float:left;
+margin-bottom: 20px;
+}
+
+
+footer{
+    background-color: orange;
+    padding: 20px 30px;
+}
+.social-media img{
+    padding: 20px 12px;
+}
+
+
+@media only screen and (min-width:500px) {
+    .grid-container{
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+    .blog-item img{
+        margin-right: 20px;
+    }
+    .social-media{
+        text-align: center;
+    }
+    .social-media img{
+        padding: 20px 60px;
+    }
+    .content1{
+        font-size: 30px;
+    }
+    .hero1, .hero2, .hero3, .hero4, .hero5{
+        height: 45vh;
+    }
+}
+    
+@media only screen and (min-width:850px) {
+ 
+    .grid-container{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .blog-item img{
+        margin-right: 20px;
+    }
+    .social-media img{
+        padding: 20px 60px;
+    }
+    .social-media{
+        text-align: center;
+    }
+    .content1{
+        font-size: 30px;
+    }
+    .hero1, .hero2, .hero3, .hero4, .hero5{
+        height: 80vh;
+    }
+    
+    }
+
+    @media only screen and (max-width:700px) {
+   
+        .hamburger, .change-menu{
+           display:block
+    }
+    
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        top: 0;
+        right:-300px;
+        position: fixed;
+        background-color: rgb(128, 128, 128);
+        padding-top:60px;
+    }
+    }
+   
